@@ -1,0 +1,5 @@
+name = Sitemap theme module
+description = Custom sitemap theme module user friendly.
+package = Custom
+core = 7.x
+version = 7.x-1.0

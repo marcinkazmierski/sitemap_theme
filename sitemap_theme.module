@@ -1,0 +1,32 @@
+<?php
+// sitemap_theme
+/**
+ * Implements hook_menu().
+ */
+function sitemap_theme_menu()
+{
+    $items = array();
+
+    $items['sitemap'] = array(
+        'title' => t('Sitemap'),
+        'page callback' => '_sitemap_theme_page',
+        'access callback' => TRUE,
+        'type' => MENU_CALLBACK,
+        'file' => 'sitemap_theme.pages.inc',
+    );
+    return $items;
+}
+
+
+/**
+ * Implements hook_theme().
+ */
+function sitemap_theme_theme($existing, $type, $theme, $path) {
+    return array(
+        'theme_sitemap_page' => array(
+            'variables' => array('items' => NULL),
+            'template' => 'sitemap-page',
+            'path' => $path . '/theme',
+        ),
+    );
+}
