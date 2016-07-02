@@ -17,7 +17,6 @@ function sitemap_theme_menu()
     return $items;
 }
 
-
 /**
  * Implements hook_theme().
  */
